@@ -20,6 +20,8 @@ app.set('view engine', 'ejs');
 app.use('/', require('./routes/index'));
 app.use('/booking', require('./routes/booking'));
 
+app.set('view engine', 'ejs');
+
 // Lancement du serveur
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => console.log(`Server running on http://localhost:${PORT}`));
