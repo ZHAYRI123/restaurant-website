@@ -18,11 +18,16 @@ app.use(express.static(join(process.cwd(), 'public'))); // Corrige le chemin pou
 app.set('view engine', 'ejs');
 
 // Routes
-import indexRoutes from './routes/index.js'; // Utilise des imports ES6 pour les routes
+import mainRoutes from './routes/main.js';
+import aboutRoutes from './routes/about.js';
+import indexRoutes from './routes/index.js'; 
 import bookingRoutes from './routes/booking.js';
+import menuRoutes from './routes/menu.js';
 
-app.use('/', indexRoutes);
+app.use('/about', aboutRoutes);
+app.use('/', mainRoutes);
 app.use('/booking', bookingRoutes);
+app.use('/menu', menuRoutes);
 
 // Lancement du serveur
 const PORT = process.env.PORT || 3000;
