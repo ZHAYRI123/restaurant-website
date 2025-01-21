@@ -93,10 +93,5 @@
   <footer>
     <p>&copy; <span id="year"></span> Farine. All Rights Reserved.</p>
   </footer>
-
-  <script>
-    // Update the year dynamically
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
 </body>
 </html>
